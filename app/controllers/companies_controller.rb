@@ -38,6 +38,10 @@ class CompaniesController < ApplicationController
     @company.destroy
   end
 
+  def import
+    Company.import(params[:file])
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_company
